@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    font-family: "oxanium", cursive;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* main*/
+main {
+    min-height: calc(100vh - 175px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+main * {
+    margin: 0;
+}
+/* ----------- */
+/* sectionPrincipal */
+#sectionPrincipal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+}
+#sectionPrincipal header {
+    font-size: 20px;
+}
+/* ----------- */
+/* jojocards */
+#contentCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 20px;
+}
+.jojocard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 30%;
+    gap: 35px;
+    background-color: #968FE8;
+    border-radius: 10px;
+    padding: 10px 5px 10px 5px;
+    min-width: 200px;
+    max-width: 400px;
+}
+.jojocard span {
+    font-size: 20px;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center;
+}
+.jojocard img {
+    width: 74px;
+    height: 93px;
+}
+/* ----------- */
+/* circle-btn */
+#circle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #968FE8;
+    border: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.4s;
+  }
+#circle-btn iconify-icon {
+    font-size: 45px;
+    color: #FFFFFF;
+}
+#circle-btn:hover {
+    background-color: #FFFFFF;
+    border-color: #968FE8;
+}
+#circle-btn:hover iconify-icon {
+    color: #A8309C;
+    transition: inherit;
+}
+/* ----------- */

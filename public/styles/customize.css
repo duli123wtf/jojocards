@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');
+/* header-main */
+#header-main {
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+}
+#logoContainer {
+    display: flex;
+    user-select: none;
+    gap: 15px;
+}
+#header-main h1 {
+    color: #FFFFFF;
+}
+#header-main iconify-icon {
+    color: #FFFFFF;
+    font-size: 35px;
+    align-self: center;
+    padding-bottom: 5px;
+}
+/* ----------- */
+/* footer-main */
+#footer-main {
+    padding: 13px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #ECECEC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+}
+#footer-main h4 {
+    color: #C1C1C1;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+/* ----------- */
