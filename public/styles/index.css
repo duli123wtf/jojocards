@@ -1,13 +1,3 @@
-* {
-    box-sizing: border-box;
-    font-family: "oxanium", cursive;
-}
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 /* main*/
 main {
     min-height: calc(100vh - 175px);
@@ -48,14 +38,19 @@ main * {
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    width: 30%;
+    width: 27%;
     gap: 35px;
     background-color: #968FE8;
     border-radius: 10px;
     padding: 10px 5px 10px 5px;
     min-width: 200px;
     max-width: 400px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
 }
+.jojocard.show {
+    opacity: 1;
+  }
 .jojocard span {
     font-size: 20px;
     color: #FFFFFF;
@@ -76,11 +71,13 @@ main * {
     height: 80px;
     border-radius: 50%;
     background-color: #968FE8;
-    border: none;
     cursor: pointer;
     border: 1px solid transparent;
     transition: 0.4s;
-  }
+    position: absolute;
+    bottom: 110px;
+    right: 40px;
+}
 #circle-btn iconify-icon {
     font-size: 45px;
     color: #FFFFFF;
