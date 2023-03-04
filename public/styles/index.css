@@ -70,11 +70,11 @@ main * {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #968FE8;
+    background-color: #a1c7ed;
     cursor: pointer;
     border: 1px solid transparent;
     transition: 0.4s;
-    position: absolute;
+    position:fixed;
     bottom: 110px;
     right: 40px;
 }
@@ -91,3 +91,34 @@ main * {
     transition: inherit;
 }
 /* ----------- */
+@media (max-width: 360px) {
+    header {
+        justify-content: center;
+    }
+    #principal-section {
+        gap: 20px;
+    }
+    #sectionPrincipal header h3{
+        font-size: 18px;
+    }
+    .jojocard {
+        width: 27%;
+        gap: 29px;
+    }
+    .jojocard span {
+        font-size: 18px;
+    }
+    .jojocard img {
+        width: 65px;
+        height: 74.75px;
+    }
+    #circle-btn {
+        width: 60px;
+        height: 60px;  
+        bottom: 110px;
+        right: 10px;
+    }
+    #circle-btn iconify-icon {
+        font-size: 33.75px;
+    }
+}

@@ -52,3 +52,22 @@ body {
     line-height: 20px;
 }
 /* ----------- */
+@media (max-width: 360px) {
+    #header-main {
+        padding: 10px 20px;
+    }
+    #header-main h1 {
+        font-size: 20px;
+    }
+    #header-main iconify-icon {
+        font-size: 25px;
+    } 
+    #footer-main {
+        padding: 26px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #footer-main h4 {
+        font-size: 12px;
+    }
+}
