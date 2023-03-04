@@ -54,6 +54,7 @@ body {
 /* ----------- */
 @media (max-width: 360px) {
     #header-main {
+        justify-content: center;
         padding: 10px 20px;
     }
     #header-main h1 {
