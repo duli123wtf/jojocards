@@ -1,4 +1,4 @@
-export const jojoCards = [
+export const JOJOCARDS = [
   { name: 'Jonathan Joestar', img: './public/images/jonathan.jpg' },
   { name: 'Joseph Joestar', img: './public/images/josephjoestar.jpg' },
   { name: 'Jotaro Kujo', img: './public/images/jotaro.jpg' },

@@ -1,33 +1,45 @@
-import { jojoCards } from "./constants.js";
-import { contentCards } from "./ui.js";
+import { JOJOCARDS } from "./constants.js";
+import { $contentCards } from "./ui.js";
+import templates from "./templates.js";
 
 let count = 0;
-export const addJojoCard = () => {
 
+export const addJojoCard = () => {
+  // Validando límites
   if (count >= 9) {
-    alert('Solo existen nueve protagonistas por ahora');
+    // Mostrar el modal
+    const modal = document.getElementById('modal');
+    modal.style.display = 'block';
+
+    // Agregar evento de click al botón de cerrar
+    const closeBtn = modal.querySelector('.close');
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
     return;
   }
-
-  const jojoCard = document.createElement('div');
-  jojoCard.id = `part${count + 1}`;
-  jojoCard.classList.add('jojocard');
-
-  const jojoName = document.createElement('span');
-  jojoName.innerText = jojoCards[count].name;
-
-  const jojoImg = document.createElement('img');
-  jojoImg.src = jojoCards[count].img;
-  jojoImg.alt = jojoCards[count].name;
-
-  jojoCard.appendChild(jojoName);
-  jojoCard.appendChild(jojoImg);
-
-  contentCards.appendChild(jojoCard);
-
-  count++;
-
+  // Creando card
+  const $jojoCard = document.createElement('div');
+  $jojoCard.id = `part${count + 1}`;
+  $jojoCard.classList.add('jojocard');
+  const currentJojo = JOJOCARDS[count];
+  $jojoCard.innerHTML = templates.getJojoCard(currentJojo);
+  // Agregando card
+  $contentCards.appendChild($jojoCard);
+  // Programando animación
   setTimeout(() => {
-    jojoCard.classList.add('show');
+    $jojoCard.classList.add('show');
   }, 100);
+  count++;
+};
+
+export const resetAll = () => {
+    // Cerrar el modal
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+    // Eliminar las tarjetas creadas
+    $contentCards.innerHTML = '';
+    // Reiniciar el contador
+    count = 0;
 };
