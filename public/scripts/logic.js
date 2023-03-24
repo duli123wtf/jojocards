@@ -1,22 +1,30 @@
 import { JOJOCARDS } from "./constants.js";
-import { $contentCards } from "./ui.js";
+import { $contentCards, $resetBtn, $modal } from "./ui.js";
 import templates from "./templates.js";
 
 let count = 0;
 
 export const addJojoCard = () => {
   // Validando límites
-  if (count >= 9) {
+  if (count >= JOJOCARDS.length) {
     // Mostrar el modal
     const modal = document.getElementById('modal');
     modal.style.display = 'block';
+    modal.classList.remove('modal-enter-active'); // Resetear la animación
+    modal.classList.add('modal-enter');
 
     // Agregar evento de click al botón de cerrar
     const closeBtn = modal.querySelector('.close');
     closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
+      modal.classList.remove('modal-enter-active');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 100);
     });
 
+    setTimeout(() => {
+      modal.classList.add('modal-enter-active');
+    }, 100);
     return;
   }
   // Creando card
@@ -43,3 +51,4 @@ export const resetAll = () => {
     // Reiniciar el contador
     count = 0;
 };
+
