@@ -46,4 +46,9 @@ export const resetAll = () => {
   $contentCards.innerHTML = '';
   // Reiniciar el contador
   count = 0;
+<<<<<<< HEAD
 };
+=======
+};
+
+>>>>>>> 8f5c8aa955086c844eeaa85536dc31923dff0153

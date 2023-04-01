@@ -6,9 +6,11 @@ main {
     align-items: center;
     padding: 20px 0;
 }
+
 main * {
     margin: 0%;
 }
+
 /* ----------- */
 /* sectionPrincipal */
 #sectionPrincipal {
@@ -19,9 +21,11 @@ main * {
     align-items: center;
     width: 100%;
 }
+
 #sectionPrincipal header {
     font-size: 20px;
 }
+
 /* ----------- */
 /* jojocards */
 #contentCards {
@@ -32,6 +36,7 @@ main * {
     position: relative;
     gap: 20px;
 }
+
 .jojocard {
     display: flex;
     align-items: center;
@@ -48,19 +53,26 @@ main * {
     opacity: 0;
     transition: all 0.3s ease-out;
 }
+
 .jojocard.show {
     opacity: 1;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8f5c8aa955086c844eeaa85536dc31923dff0153
 .jojocard span {
     font-size: 20px;
     color: #FFFFFF;
     display: flex;
     text-align: center;
 }
+
 .jojocard img {
     width: 74px;
     height: 93px;
 }
+
 /* ----------- */
 /* circle-btn */
 #circle-btn {
@@ -78,18 +90,22 @@ main * {
     bottom: 110px;
     right: 40px;
 }
+
 #circle-btn iconify-icon {
     font-size: 45px;
     color: #FFFFFF;
     transition: inherit;
 }
+
 #circle-btn:hover {
     background-color: #FFFFFF;
     border-color: #968FE8;
 }
+
 #circle-btn:hover iconify-icon {
     color: #A8309C;
 }
+
 /* ----------- */
 /* Modal */
 .modal {
@@ -115,17 +131,26 @@ main * {
     height: 100%;
     transition: 0.4s;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8f5c8aa955086c844eeaa85536dc31923dff0153
 .modal-content {
     position: relative;
     background-color: #fefefe;
     margin: 15% auto;
+<<<<<<< HEAD
     padding: 50px;
+=======
+    padding: 20px;
+>>>>>>> 8f5c8aa955086c844eeaa85536dc31923dff0153
     border: 2px solid #888;
     width: 40%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     gap: 45px;
     border-radius: 15px;
     transition: 0.4s;
@@ -137,7 +162,16 @@ main * {
 }
 .modal.hidden .modal-content {
     transform: translateY(-100%);
+=======
+    gap: 10px;
+    border-radius: 10px;
+    transition: 0.4s;
+>>>>>>> 8f5c8aa955086c844eeaa85536dc31923dff0153
 }
+.modal.hidden .modal-content {
+    transform: translateY(-100%);
+}
+
 .close {
     position: absolute;
     top: 5px;
@@ -147,12 +181,14 @@ main * {
     font-weight: bold;
     transition: 0.4s;
 }
+
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
+<<<<<<< HEAD
 /* ----------- */
 /* reset-btn */
 .reset-btn,
@@ -266,6 +302,33 @@ main * {
 }
 /* ----------- */
 /* media querie 360px */
+=======
+
+.modal-content p {
+    color: #1e1c1c;
+    font-weight: bold;
+}
+
+.modal-content button {
+    display: flex;
+    cursor: pointer;
+    background-color: #a393a2;
+    border-color: #888888;
+    color: #ffffff;
+    border: 1px solid transparent;
+    transition: background-color 0.4s, border-color 0.4s, color 0.4s, font-size 0.4s;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #e4e2e2;
+    color: #191818;
+    border-color: #191818;
+}
+
+/* ----------- */
+>>>>>>> 8f5c8aa955086c844eeaa85536dc31923dff0153
 @media (max-width: 360px) {
     header {
         justify-content: center;
