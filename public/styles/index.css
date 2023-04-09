@@ -40,13 +40,24 @@ main * {
     position: relative;
     width: 27%;
     gap: 35px;
-    background-color: #968FE8;
     border-radius: 10px;
     padding: 10px 5px 10px 5px;
     min-width: 200px;
     max-width: 400px;
     opacity: 0;
     transition: all 0.3s ease-out;
+    --card-gradient: #ff47d1, #e9a2ef;
+    --card-blend-mode: overlay;
+    --card-blend-mode: multiply;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+    padding-bottom: 1rem;
+    background-image: linear-gradient(
+      var(--card-gradient),
+      white max(9.5rem, 27vh)
+    );
+    overflow: hidden;
 }
 .jojocard.show {
     opacity: 1;
@@ -60,6 +71,10 @@ main * {
 .jojocard img {
     width: 74px;
     height: 93px;
+    border-radius: 0.5rem 0.5rem 0 0;
+    object-fit: cover;
+    mix-blend-mode: var(--card-blend-mode);
+    filter: grayscale(100);
 }
 /* ----------- */
 /* circle-btn */
@@ -167,14 +182,14 @@ main * {
 .reset-btn {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
-  background-color: #000;
+  background-color: #000000;
   background-image: none;
   color: #ffffff;
   cursor: pointer;
   font-size: 100%;
   line-height: 1.5;
   margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  -webkit-mask-image: -webkit-radial-gradient(#000000, #ffffff);
   padding: 0;
 }
 .reset-btn:disabled {
