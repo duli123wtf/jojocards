@@ -4,6 +4,17 @@ import templates from "./templates.js";
 
 let count = 0;
 
+const closeModal = () => {
+  $modal.classList.add('hidden');
+  console.log("sdasdsa");
+
+  // Eliminar el event listener
+  const closeBtn = $modal.querySelector('.close');
+  const backgroundModal = $modal.querySelector('.modal-background');
+  closeBtn.removeEventListener('click', closeModal);
+  backgroundModal.removeEventListener('click', closeModal);
+}
+
 export const addJojoCard = () => {
   // Validando límites
   if (count < JOJOCARDS.length) {
@@ -23,25 +34,18 @@ export const addJojoCard = () => {
     return;
   }
   // Mostrar el modal
-  const modal = document.getElementById('modal');
-  // modal.classList.remove('modal-enter-active'); // Resetear la animación
-  modal.classList.remove('hidden');
+  $modal.classList.remove('hidden');
 
   // Agregar evento de click al botón de cerrar
-  const closeBtn = modal.querySelector('.close');
-  const backgroundModal = modal.querySelector(".modal-background");
-  const handlerCloseModal = () => {
-    modal.classList.add('hidden');
-    console.log("sdasdsa");
-  }
-  closeBtn.addEventListener('click', handlerCloseModal);
-  backgroundModal.addEventListener("click", handlerCloseModal);
+  const closeBtn = $modal.querySelector('.close');
+  const backgroundModal = $modal.querySelector('.modal-background');
+  closeBtn.addEventListener('click', closeModal);
+  backgroundModal.addEventListener('click', closeModal);
 };
 
 export const resetAll = () => {
   // Cerrar el modal
-  const modal = document.getElementById('modal');
-  modal.classList.add('hidden');
+  $modal.classList.add('hidden');
   // Eliminar las tarjetas creadas
   $contentCards.innerHTML = '';
   // Reiniciar el contador
