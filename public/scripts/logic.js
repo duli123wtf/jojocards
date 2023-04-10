@@ -8,7 +8,6 @@ const closeModal = () => {
   $modal.classList.add('hidden');
   console.log("sdasdsa");
 
-  // Eliminar el event listener
   const closeBtn = $modal.querySelector('.close');
   const backgroundModal = $modal.querySelector('.modal-background');
   closeBtn.removeEventListener('click', closeModal);
